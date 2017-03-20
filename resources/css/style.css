@@ -4,6 +4,7 @@ html {
   font-family: Helvetica;
   width: 960px;
 }
+
 .top {
   background-color: black;
   color: white;
@@ -76,12 +77,21 @@ html {
   top: -.5rem;
 
 }
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: black;
+  margin-bottom: 4rem;
+}
+.bottom .textbox {
+  text-align: left;
+  padding: 1rem 0 1rem 2rem;
+}
 .location {
   width: 35%;
-  color: black
-  padding: 1rem;
+  color: black;
 }
-
 .hours {
   width: 35%;
   color: black
