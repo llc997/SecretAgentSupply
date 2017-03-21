@@ -109,3 +109,28 @@ html {
 .footer p {
   margin-left: .5rem;
 }
+@media only screen and (max-width: 1024px) {
+  .banner h1 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  .banner h2 {
+    font-size: .77rem;
+    font-weight: bold;
+  }
+  .banner {
+    background-image: url(../images/moto.jpeg);
+    background-size: cover;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+  }
+  .block {
+    background-color: black;
+    width: 20rem;
+    padding: 1rem 2rem;
+    margin-top: 10rem;
+  }
+
+}
