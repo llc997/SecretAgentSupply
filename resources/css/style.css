@@ -44,14 +44,19 @@ html {
   font-size: 1rem;
   font-weight: bold;
 }
-.nav {
+nav {
   background-color: firebrick;
   color: white;
-  padding: .75rem 0;
-  display: flex;
-  justify-content: space-around;
 }
-
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+}
+.mobile-nav {
+  display: none;
+}
 /* PRODUCT SECTION */
 .main {
   max-width: 960px;
@@ -67,8 +72,8 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
+
 .product_image img {
   border: 4px solid black;
   display: flex;
@@ -83,19 +88,10 @@ html {
   color: white;
   display: flex;
   justify-content: center;
-  text-align: center;
-  margin: 0 auto;
   padding: .5rem;
 }
 
 /* LOCATION & HOURS */
-.description {
-  display: block;
-  padding: 0.5rem;
-  background-color: black;
-  text-align: center;
-  color: white;
-}
 .business-info {
   display: flex;
   justify-content: space-between;
@@ -129,27 +125,77 @@ html {
 
 }
 @media only screen and (max-width: 1024px) {
-  .banner h1 {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 1rem;
+  nav ul {
+    display: none;
   }
-  .banner h2 {
-    font-size: .77rem;
-    font-weight: bold;
+  .mobile-nav {
+    display: block;
+    text-align: center;
   }
-  .banner {
-    background-image: url(../images/moto.jpeg);
-    background-size: cover;
-    height: 15rem;
-    display: flex;
-    align-items: center;
+  .box {
+    width: 47%;
   }
-  .block {
-    background-color: black;
-    width: 20rem;
-    padding: 1rem 2rem;
-    margin-top: 10rem;
+  .product_image.glasses {
+    display: none;
+  }
+  .info {
+    width: 35%;
   }
 
-}
+  @media only screen and (max-width: 470px) {
+    .banner {
+      height: 15rem;
+    }
+    .block {
+      background-color: black;
+      width: 20rem;
+      padding: 1rem 2rem;
+      margin-top: 10rem;
+    }
+    .banner h1 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-top: .25rem;
+    }
+    .banner h2 {
+      font-size: .77rem;
+      font-weight: bold;
+    }
+    nav ul {
+      display: none;
+    }
+    .mobile-nav {
+      display: block;
+      text-align: center;
+    }
+    .products.box {
+      width: 90%;
+    }
+    .product_image.watch {
+      display: none;
+    }
+    .product_image.glasses {
+      display: none;
+    }
+    .info {
+      width: 90%;
+    }
+    .business-info {
+      flex-wrap: wrap;
+    }
+    .product {
+      width: 90%;
+      margin: auto;
+    }
+
+    .product.watch {
+      display: none;
+    }
+
+    .info {
+      width: 90%;
+      margin: 0.5rem auto;
+    }
+    .footer p {
+      text-align: center;
+    }
